@@ -1,0 +1,32 @@
+{
+  "name": "riesgos",
+  "description": "riesgos",
+  "main": "riesgo",
+  "authors": [
+    "wjesus <wjesus88@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7"
+  },
+  "devDependencies": {
+    "font-awesome": "~4.4.0",
+    "requirejs": "~2.1.20",
+    "normalize-css": "~3.0.3",
+    "lodash": "~3.10.1",
+    "restangular": "~1.5.1",
+    "rrssb": "~1.8.6"
+  }
+}
