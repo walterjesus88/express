@@ -42,7 +42,7 @@ app.engine(config().views.engine,exphbs({
 //view engine setup
 app.set('views', path.join(__dirname, 'views'));
 //app.set('view engine', 'jade');
-app.set('view engine', '.hbs');
+app.set('view engine', config().views.engine);
 app.use(express.static(path.join(__dirname,'public')));
 
 app.use(favicon());
@@ -76,12 +76,21 @@ if (app.get('env') === 'development') {
 
 // production error handler
 // no stacktraces leaked to user
+
+// app.use(function(err, req, res, next) {
+//     res.status(err.status || 500);
+//     res.render('error', {
+//         message: err.message,
+//         error: {}
+//     });
+// });
+
 app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-        message: err.message,
-        error: {}
-    });
+  res.status(err.status || 500);
+  res.render('error', {
+    message: err.message,
+    error: err
+  });
 });
 
 
