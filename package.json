@@ -3,9 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "nodejs ./bin/www"
+    "start": "pm2 start pm2.json"
   },
-
   "dependencies": {
     "express": "~4.0.0",
     "static-favicon": "~1.0.0",
@@ -17,11 +16,12 @@
     "express-handlebars": "latest",
     "lodash": "latest",
     "stylus": "latest",
-    "nib": "latest"
+    "nib": "latest",
+    "js-yaml": "latest"
   },
-
-   "devDependencies": {
-      "bower":"latest",
-      "gulp":"latest"
-   }
+  "devDependencies": {
+    "bower": "latest",
+    "gulp": "latest",
+    "pm2": "^0.15.10"
+  }
 }
